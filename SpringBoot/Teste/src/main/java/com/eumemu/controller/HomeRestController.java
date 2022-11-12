@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.eumemu.entity.User;
+import com.eumemu.service.UserService;
+
 
 
 @RestController

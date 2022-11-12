@@ -26,5 +26,12 @@ public class HomeController {
 
 		return "home";
 	}
+	public static void main(String[] args) {
+		HomeController home= new HomeController();
+		
+		String retorno = home.home(null);
+		
+		System.out.println(retorno);
+	}
 
 }
