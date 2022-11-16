@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 	@GetMapping("/test")
-	public String saudacao(@RequestParam(name="nome",defaultValue="DIO")String nome) {
+	public String saudacao(@RequestParam(name="nome",defaultValue="Renan")String nome) {
 		return String.format("Bem vindo, %s", nome);
 	}
 }

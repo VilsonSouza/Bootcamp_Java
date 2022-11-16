@@ -2,6 +2,7 @@ package com.eumemu.springboottest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,5 +25,10 @@ public class TestintController {
 		RequestBuilder requisicao = get("/test");
 		MvcResult resultado = mvc.perform(requisicao).andReturn();
 		assertEquals("Bem vindo, DIO", resultado.getResponse().getContentAsString());
+	}
+	
+	@Test
+	public void testIntComArgumento()throws Exception {
+		mvc.perform(get("/test?nome=Renan")).andExpect(content().string("Bem vindo, Renan"));
 	}
 }
